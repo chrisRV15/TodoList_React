@@ -1,0 +1,134 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background: #0c0e0c;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.new-item-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    color: #eaebea;
+    font-size: 40px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #d8323c;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 4px;
+    cursor: pointer;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.btn:hover,
+.btn:focus-visible{
+    background-color: #A9081c;
+}
+
+.btn.btn-danger:hover,
+.btn.btn.btn-danger:focus-visible{
+    background-color: #A9081c;
+}
+
+.new-item-form input{
+    outline: none;
+    border: 1px solid;
+    background: #eaebea;
+    border-radius: 8px;
+    padding: 4px;
+    color: #0c0e0c;
+    font-size: large;
+}
+
+.new-item-form input:focus{
+    border: 1px solid;
+}
+
+.header{
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #eaebea;
+}
+
+.list{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    list-style: disc;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.list li{
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.list li label{
+    display: flex;
+    gap: 10px;
+    color: #eaebea;
+    cursor: pointer;
+    align-items: center;
+}
+
+.list li input{
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    border-radius: 0.25em;
+    display: flex;
+    
+}
+
+.list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+}
+
+.list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(200, 100%, 40%);
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.list li label::after{
+    justify-content: center;
+    align-items: center;
+}
